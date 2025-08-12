@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel</title>
+    <style>
+        body{
+            padding: 10px;
+        }
+        .parent{
+            width: 100%;
+            text-align: center;
+            
+        }
+        .child{
+            display: inline-block;
+            width: 24%;
+            vertical-align: top;
+            padding-left: 2px;
+        }
+        .parent1{
+            width: 100%;
+            text-align: center;
+            
+        }
+        .child1{
+            display: inline-block;
+            width: 24%;
+            vertical-align: top;
+            padding-left: 2px;
+        }
+        img{
+            width: 100%;
+        }
+        p{
+            line-height:1.5em;
+            font-size: 1em;
+        }
+        h3{
+            line-height:1.5em;
+            font-size: 1em;
+        }
+        .mid>h2{
+            text-align: center;
+        }
+        .mid>img{
+            margin-left: 18%; 
+            width: 70% 
+        }
+        .mid>p{
+            text-align: center;
+            margin: 0% 5% 0% 5%;
+        }
+        .b{
+           
+            width: 100%;
+            text-align: left;
+        }
+        .footer{
+            /* text-align: left; */
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            /* padding-left: 3px; */
+        }
+        .footer h2{
+
+        font-size: 20px;
+        margin-bottom: 10px;
+        }
+        .footer p{
+            font-size:14px;
+        }
+        .mf{
+            margin-bottom: 15px;
+
+        }
+        .img1, .img2{
+            width:50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .p1, .p2 {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 70px);
+    }
+
+    hr {
+      margin: 15px 0;
+    }
+
+    /* Tag Styling */
+    .footer:last-child p {
+      display: inline-block;
+      background-color: #555;
+      color: white;
+      padding: 5px 10px;
+      margin: 4px 2px;
+      font-size: 13px;
+    }
+
+    .footer:last-child p:first-child {
+      background-color: black;
+    }
+       
+        
+    </style>
+</head>
+<body>
+       <div class="parent">
+        <div class="child">
+            <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="">
+            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="child">
+            <img src="https://www.w3schools.com/w3images/steak.jpg" alt="">
+            <h3>Let Me Tell You About This Steak</h3>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="child">
+            <img src="https://www.w3schools.com/w3images/cherries.jpg" alt="">
+            <h3>Cherries, interrupted</h3>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum. <br>What else? 
+            </p>
+
+        </div>
+        <div class="child">
+            <img src="https://www.w3schools.com/w3images/wine.jpg" alt="">
+            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+
+        </div>
+       </div>
+       <div class="parent1">
+        <div class="child1">
+           <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="">
+           <h3>All I Need Is a Popsicle</h3>
+           <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="child1">
+            <img src="https://www.w3schools.com/w3images/salmon.jpg" alt="">
+            <h3>Salmon For Your Skin</h3>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="child1">
+            <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="">
+            <h3>The Perfect Sandwich, A Real Classic</h3>
+            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="child1">
+            <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="">
+            <h3>Le French</h3>
+            <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+       </div>
+    <div class="mid">
+        <h2>My Food</h2>
+        <img src="https://www.w3schools.com/w3images/chef.jpg" alt="">
+        <h2>I am Who I Am!</h2>
+        <p>With Passion For Real, Good Food <br>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+
+
+<div class="b">
+
+    <div class="footer">
+        <h2>FOOTER</h2>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm">w3.css</a></p>
+    </div>
+
+    <div class="footer">
+        <div class="mf">
+        <h2>BLOG POST</h2>
+        <img src="https://www.w3schools.com/w3images/workshop.jpg" alt="" class="img1">
+        <p class="p1">LoremSed mattis nunc</p>
+        </div>
+        <hr>
+
+        <div class="mf">
+            <img src="https://www.w3schools.com/w3images/gondol.jpg" alt="" class="img2">
+            <p class="p2">IpsumPraes tinci sed</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>POPULAR TAGS</h2>
+        <p>Travel</p>
+        <p>New York</p>
+        <p>Dinner</p>
+        <p>Salmon</p>
+        <p>France</p>
+        <p>Drinks</p>
+        <p>Ideas</p>
+        <p>Flavors</p>
+        <p>Cuisine</p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
