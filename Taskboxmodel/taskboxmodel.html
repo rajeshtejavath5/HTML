@@ -105,8 +105,41 @@
     .footer:last-child p:first-child {
       background-color: black;
     }
-       
+       @media screen and (min-width: 320px) and (max-width:480px) {
+        .child{
+            display:block;
+            width:900px;
+            height: 1600px;
+            font-size: 300%;
+            /* background-color: blueviolet; */
+        }
+            .child1{
+            display:block;
+            width:900px;
+            height: 1600px;
+            font-size: 300%;
+            /* background-color: blueviolet; */
+        }.mid{
+            display: block;
+            width:1000px;
+            height:1500px;
+            font-size: 250em;
+        }
+        .footer{
+            width:1000px;
+            height:1000px;
+            font-size: 500%;
+        }
+
+
         
+       }
+       @media screen and (min-width: 480x) and (max-width: 768px){
+        body{
+            background-color: azure;
+        }
+       }
+       
     </style>
 </head>
 <body>
@@ -135,6 +168,8 @@
 
         </div>
        </div>
+
+
        <div class="parent1">
         <div class="child1">
            <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="">
@@ -157,6 +192,7 @@
             <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
        </div>
+
     <div class="mid">
         <h2>My Food</h2>
         <img src="https://www.w3schools.com/w3images/chef.jpg" alt="">

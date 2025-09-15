@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛒 Fake Store API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .product {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: green;
+            font-size: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🛒 Product List (from Fake Store API)</h1>
+    <div id="products">Loading products...</div>
+
+    <script>
+        // Step 1: Fetch data from the Fake Store API means we are making a request to server to get the products data
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json()) // Convert to JSON -> means we are converting our raw json into plain objects
+            .then(data => {
+                const container = document.getElementById('products');
+                container.innerHTML = ''; // Clear 'Loading...' text
+
+                // Step 2: Loop through each product
+                data.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.className = 'product';
+
+                    // Step 3: Set inner HTML with product details
+                    productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.title}">
+            <div class="title">${product.title}</div>
+            <div class="price">₹ ${product.price}</div>
+          `;
+                    // Step 4: Add product to the container
+                    container.appendChild(productDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                document.getElementById('products').innerHTML = "Something went wrong.";
+            });
+    </script>
+</body>
+</html>
